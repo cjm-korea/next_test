@@ -7,13 +7,15 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
     return {
       type: 'mysql',
       host: 'localhost',
-      port: 3306,
+      port: 13306,
       username: 'root',
       password: process.env.DB_PASSWORD,
       database: 'next_test',
       autoLoadEntities: true,
-    //   something is wrong
-    //   entities: [__dirname + '/entities/*.entity{.ts,.js}'],
+      // something is wrong
+      // entities: [__dirname + '/**/*.entity.{js,ts}'],
+      // set absolute path is well operation
+      // entities: [User],
       synchronize: true,
     };
   }

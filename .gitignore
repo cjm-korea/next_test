@@ -1,6 +1,9 @@
 # config & setting
 .env
 
+# DB
+/db
+
 # compiled output
 /dist
 /node_modules
