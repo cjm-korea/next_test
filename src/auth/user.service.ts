@@ -12,10 +12,10 @@ export class UserService{
     ) {}
 
     async findByFields(options: FindOneOptions<UserDTO>): Promise<UserDTO | undefined> {
-        return await this.userRepository.findOne(options);
+        return this.userRepository.findOne(options);
     }
 
     async save(userDTO: UserDTO): Promise<UserDTO | undefined> {
-        return await this.userRepository.save(userDTO);
+        return this.userRepository.save(userDTO);
     }
 }
